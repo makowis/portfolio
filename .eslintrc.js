@@ -5,7 +5,8 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended'
+    'plugin:@typescript-eslint/recommended',
+    "plugin:prettier/recommended"
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -18,6 +19,13 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "trailingComma": "es5"
+      }
+    ]
   },
   settings: {
     react: {

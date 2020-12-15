@@ -9,9 +9,7 @@ const Layout: FC = ({ children }) => (
       <title>mako_wis portfolio</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <main className={styles.main}>
-      {children}
-    </main>
+    <main className={styles.main}>{children}</main>
     <footer className={styles.footer}>
       <a
         href="https://github.com/makowis"
@@ -25,7 +23,7 @@ const Layout: FC = ({ children }) => (
 );
 
 Layout.propTypes = {
-  children: PropTypes.element
-}
+  children: PropTypes.element,
+};
 
 export default Layout;
