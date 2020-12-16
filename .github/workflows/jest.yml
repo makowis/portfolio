@@ -11,12 +11,9 @@ jobs:
       uses: actions/setup-node@v1
     - name: yarn install
       run: yarn install
-    - name: mkdir coverage
-      run: mkdir coverage
     - name: Run jest test
-      run: yarn test
-    - name: Upload test coverage artifact
-      uses: actions/upload-artifact@v1
+      run: yarn test --coverage
+    - name: Upload Coverage
+      uses: codecov/codecov-action@v1
       with:
-        name: coverage
-        path: coverage
+        token: ${{ secrets.CODECOV_TOKEN }}
