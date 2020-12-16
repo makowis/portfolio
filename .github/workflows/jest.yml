@@ -1,0 +1,19 @@
+name: jest
+on:
+  pull_request:
+    types: [opened, synchronize]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup Node.js
+      uses: actions/setup-node@v1
+    - name: yarn install
+      run: yarn install
+    - name: Run jest test
+      run: yarn test --coverage
+    - name: Upload Coverage
+      uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
