@@ -1,10 +1,11 @@
 name: deploy
 on:
-  workflows: [eslint,jest]
-  branches: [main]
-  types: 
-    - completed
-    - requested
+  workflow_run:
+    workflows: [eslint,jest]
+    branches: [main]
+    types: 
+      - completed
+      - requested
 jobs:
   deploy:
     name: deploy
