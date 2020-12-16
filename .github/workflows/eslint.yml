@@ -2,6 +2,9 @@ name: eslint
 on:
   pull_request:
     types: [opened, synchronize]
+  push:
+    branches:
+      - main
 jobs:
   eslint:
     name: eslint

@@ -2,6 +2,9 @@ name: jest
 on:
   pull_request:
     types: [opened, synchronize]
+  push:
+    branches:
+      - main
 jobs:
   test:
     runs-on: ubuntu-latest
