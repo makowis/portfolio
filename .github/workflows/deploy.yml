@@ -1,7 +1,7 @@
 name: deploy
 on:
   workflow_run:
-    workflows: [eslint,jest]
+    workflows: [jest]
     branches: [main]
     types: 
       - completed
