@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
+import Footer from './footer'
 import styles from '../styles/layout.module.scss';
 
 const Layout: FC = ({ children }) => (
@@ -10,15 +11,7 @@ const Layout: FC = ({ children }) => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <main className={styles.main}>{children}</main>
-    <footer className={styles.footer}>
-      <a
-        href="https://github.com/makowis"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Powered by mako_wis
-      </a>
-    </footer>
+    <Footer />
   </div>
 );
 
