@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
-import Footer from './footer'
+import Footer from './footer';
 import styles from '../styles/layout.module.scss';
 
 const Layout: FC = ({ children }) => (
