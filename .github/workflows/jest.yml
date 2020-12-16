@@ -11,6 +11,8 @@ jobs:
       uses: actions/setup-node@v1
     - name: yarn install
       run: yarn install
+    - name: mkdir coverage
+      run: mkdir coverage
     - name: Run jest test
       run: yarn test
     - name: Upload test coverage artifact
