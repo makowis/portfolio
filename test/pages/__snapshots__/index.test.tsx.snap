@@ -4,19 +4,60 @@ exports[`renders correctly 1`] = `
 <div>
   <main>
     <h1>
-      Welcome to 
-      <a
-        href="https://nextjs.org"
-      >
-        Next.js!
-      </a>
+      makowis.com
     </h1>
     <p>
-      Get started by editing 
-      <code>
-        pages/index.js
-      </code>
+      ポートフォリオサイトという名のリンク集
     </p>
+    <section>
+      <h2>
+        Links
+      </h2>
+      <ul>
+        <li>
+          <a
+            href="https://twitter.com/mako_wis"
+          >
+            Twitter
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.facebook.com/makoto.henmi"
+          >
+            Facebook
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/mako_wis/"
+          >
+            Instagram
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/makowis"
+          >
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://speakerdeck.com/makowis"
+          >
+            Speaker Deck
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://mako-wis.hatenablog.com/"
+          >
+            Blog
+          </a>
+        </li>
+      </ul>
+    </section>
   </main>
   <footer>
     <a
