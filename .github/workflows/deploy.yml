@@ -8,12 +8,20 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - uses: actions/checkout@v3
-      - uses: amondnet/vercel-action@v20
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          vercel-args: '--prod --confirm'
-          vercel-org-id: ${{ secrets.ORG_ID}} 
-          vercel-project-id: ${{ secrets.PROJECT_ID}}
+          node-version: 18.x
+          cache: yarn
+      - name: Install dependencies
+        run: yarn --frozen-lockfile
+      - name: Page Generate
+        run: yarn generate
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: out

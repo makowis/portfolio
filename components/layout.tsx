@@ -7,7 +7,7 @@ import styles from '../styles/layout.module.scss';
 const Layout: FC = ({ children }) => (
   <div className={styles.container}>
     <Head>
-      <title>mako_wis portfolio</title>
+      <title>mako_wis.com</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <main className={styles.main}>{children}</main>
