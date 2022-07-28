@@ -4,7 +4,7 @@ import Layout from '../components/layout';
 
 const Home: FC = () => (
   <Layout>
-    <h1 className={styles.title}>makowis.com</h1>
+    <h1 className={styles.title}>makowis.dev</h1>
     <p className={styles.description}>ポートフォリオサイトという名のリンク集</p>
     <section className={styles.subSection}>
       <h2 className={styles.subTitle}>Links</h2>
