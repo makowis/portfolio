@@ -7,9 +7,11 @@ jobs:
     name: eslint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4      
+      - name: yarn enable
+        run: corepack enable
       - name: yarn install
         run: yarn install
       - name: eslint review
