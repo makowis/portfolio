@@ -1,11 +1,12 @@
+/** @type {import('ts-jest').JestConfigWithTsJest} **/
 module.exports = {
+  testEnvironment: "node",
   collectCoverageFrom: [
     '**/*.{js,jsx,ts,tsx}',
     '!**/*.d.ts',
     '!**/node_modules/**',
   ],
   preset: 'ts-jest',
-  testEnvironment: 'jsdom',
   testMatch: [
     '**/__tests__/**/*.+(ts|tsx|js)',
     '**/?(*.)+(spec|test).+(ts|tsx|js)',

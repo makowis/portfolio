@@ -1,10 +1,13 @@
 import React, { FC } from 'react';
-import PropTypes from 'prop-types';
 import Head from 'next/head';
 import Footer from './footer';
 import styles from '../styles/layout.module.scss';
 
-const Layout: FC = ({ children }) => (
+type Props = {
+  children: React.ReactNode;
+};
+
+const Layout: FC<Props> = ({ children }) => (
   <div className={styles.container}>
     <Head>
       <title>mako_wis.com</title>
@@ -14,9 +17,5 @@ const Layout: FC = ({ children }) => (
     <Footer />
   </div>
 );
-
-Layout.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.element),
-};
 
 export default Layout;
