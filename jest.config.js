@@ -5,6 +5,12 @@ module.exports = {
     '**/*.{js,jsx,ts,tsx}',
     '!**/*.d.ts',
     '!**/node_modules/**',
+    '!config/jest/cssTransform.js',
+    '!out/**',
+    '!.next/**',
+    '!.idea/**',
+    '!coverage/**',
+    '!.github/**',
   ],
   preset: 'ts-jest',
   testMatch: [
