@@ -1,28 +1,32 @@
+/** @type {import('ts-jest').JestConfigWithTsJest} **/
 module.exports = {
+  testEnvironment: 'node',
   collectCoverageFrom: [
-    "**/*.{js,jsx,ts,tsx}",
-    "!**/*.d.ts",
-    "!**/node_modules/**",
+    '**/*.{js,jsx,ts,tsx}',
+    '!**/*.d.ts',
+    '!**/node_modules/**',
+    '!config/jest/cssTransform.js',
+    '!out/**',
+    '!.next/**',
+    '!.idea/**',
+    '!coverage/**',
+    '!.github/**',
+    '.prettierrc.js',
+    'jest.config.js',
   ],
   preset: 'ts-jest',
-  testEnvironment: "jsdom",
   testMatch: [
-    "**/__tests__/**/*.+(ts|tsx|js)",
-    "**/?(*.)+(spec|test).+(ts|tsx|js)"
+    '**/__tests__/**/*.+(ts|tsx|js)',
+    '**/?(*.)+(spec|test).+(ts|tsx|js)',
   ],
-  testPathIgnorePatterns: ["/node_modules/", "/.next/"],
-  // setupFilesAfterEnv: ["<rootDir>/setupTests.js"],
+  testPathIgnorePatterns: ['/node_modules/', '/.next/'],
   transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest',
-    "^.+\\.(css|scss)$": "<rootDir>/config/jest/cssTransform.js"
+    '^.+\\.(ts|tsx)$': [
+      'ts-jest',
+      {
+        tsconfig: '<rootDir>/test/tsconfig.jest.json',
+      },
+    ],
+    '^.+\\.(css|scss)$': '<rootDir>/config/jest/cssTransform.js',
   },
-   // https://github.com/zeit/next.js/issues/8663#issue-490553899
-  globals: {
-    // we must specify a custom tsconfig for tests because we need the typescript transform
-    // to transform jsx into js rather than leaving it jsx such as the next build requires. you
-    // can see this setting in tsconfig.jest.json -> "jsx": "react"
-    'ts-jest': {
-      'tsConfig': '<rootDir>/test/tsconfig.jest.json'
-    }
-  }
-}
+};
