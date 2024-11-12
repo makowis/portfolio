@@ -1,7 +1,7 @@
 module.exports = {
-  process() {    
+  process() {
     return {
-      code: 'module.exports = {};'
+      code: 'module.exports = {};',
     };
   },
   getCacheKey() {
