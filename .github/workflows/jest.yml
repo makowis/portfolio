@@ -19,6 +19,6 @@ jobs:
       - name: Run jest test
         run: yarn test --coverage
       - name: Upload Coverage
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
