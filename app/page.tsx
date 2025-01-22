@@ -2,7 +2,7 @@ import styles from '../styles/Home.module.scss';
 
 export default function Page() {
   return (
-    <div>
+    <>
       <h1 className={styles.title}>makowis.dev</h1>
       <p className={styles.description}>ポートフォリオサイトという名のリンク集</p>
       <section className={styles.subSection}>
@@ -28,6 +28,6 @@ export default function Page() {
           </li>
         </ul>
       </section>
-    </div>
+    </>
   )
 }
