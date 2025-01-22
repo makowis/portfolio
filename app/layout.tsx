@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import type { Metadata } from 'next';
 import Footer from './_layout/footer';
 import styles from '../styles/layout.module.scss';
@@ -13,15 +13,15 @@ export const metadata: Metadata = {
   description: 'mako_wisのポートフォリオサイト',
 };
 
-export default function Layout({ children }: Props) {
-  return (
-    <html lang="ja">
-      <body>
-        <div className={styles.container}>
-          <main className={styles.main}>{children}</main>
-          <Footer />
-        </div>
-      </body>
-    </html>
-  );
-}
+const Layout: FC = ({ children }: Props) => (
+  <html lang="ja">
+    <body>
+      <div className={styles.container}>
+        <main className={styles.main}>{children}</main>
+        <Footer />
+      </div>
+    </body>
+  </html>
+);
+
+export default Layout;
