@@ -11,8 +11,6 @@ module.exports = {
     '!.idea/**',
     '!coverage/**',
     '!.github/**',
-    '.prettierrc.js',
-    'jest.config.js',
   ],
   preset: 'ts-jest',
   testMatch: [
