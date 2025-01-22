@@ -1,10 +1,13 @@
+import React from 'react';
 import styles from '../styles/Home.module.scss';
 
 export default function Page() {
   return (
     <>
       <h1 className={styles.title}>makowis.dev</h1>
-      <p className={styles.description}>ポートフォリオサイトという名のリンク集</p>
+      <p className={styles.description}>
+        ポートフォリオサイトという名のリンク集
+      </p>
       <section className={styles.subSection}>
         <h2 className={styles.subTitle}>Links</h2>
         <ul className={styles.links}>
@@ -29,5 +32,5 @@ export default function Page() {
         </ul>
       </section>
     </>
-  )
+  );
 }
