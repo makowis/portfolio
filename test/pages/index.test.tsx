@@ -4,5 +4,5 @@ import Page from '../../app/page';
 
 it('renders correctly', () => {
   const { container } = render(<Page />);
-  expect(container.childNodes).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });
