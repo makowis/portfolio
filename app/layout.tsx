@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description: 'mako_wisのポートフォリオサイト',
 };
 
-const Layout: FC = ({ children }: Props) => (
+const Layout: FC<Props> = ({ children }) => (
   <html lang="ja">
     <body>
       <div className={styles.container}>
