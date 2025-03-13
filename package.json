@@ -7,7 +7,7 @@
     "build": "next build",
     "generate": "next build && next export",
     "start": "next start",
-    "lint:js": "next lint .",
+    "lint:js": "next lint -d .",
     "lint:fix": "yarn lint:js --fix && prettier --write .",
     "lint": "yarn lint:js && prettier --check .",
     "test": "jest",
