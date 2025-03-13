@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import Home from '../../pages/index';
+import Page from '../../app/page';
 
 it('renders correctly', () => {
-  const { container } = render(<Home />);
-  expect(container.childNodes).toMatchSnapshot();
+  const { container } = render(<Page />);
+  expect(container).toMatchSnapshot();
 });

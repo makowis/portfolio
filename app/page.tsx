@@ -1,9 +1,8 @@
 import React, { FC } from 'react';
 import styles from '../styles/Home.module.scss';
-import Layout from '../components/layout';
 
-const Home: FC = () => (
-  <Layout>
+const Page: FC = () => (
+  <>
     <h1 className={styles.title}>makowis.dev</h1>
     <p className={styles.description}>ポートフォリオサイトという名のリンク集</p>
     <section className={styles.subSection}>
@@ -29,7 +28,7 @@ const Home: FC = () => (
         </li>
       </ul>
     </section>
-  </Layout>
+  </>
 );
 
-export default Home;
+export default Page;
