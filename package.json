@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint:js": "next lint -d .",
+    "lint:js": "eslint .",
     "lint:fix": "yarn lint:js --fix && prettier --write .",
     "lint": "yarn lint:js && prettier --check .",
     "test": "jest",
