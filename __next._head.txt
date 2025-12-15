@@ -3,6 +3,6 @@
 4:I[97367,["/_next/static/chunks/42879de7b8087bc9.js"],"MetadataBoundary"]
 5:"$Sreact.suspense"
 7:I[27201,["/_next/static/chunks/42879de7b8087bc9.js"],"IconMark"]
-0:{"buildId":"qe-L52vpzl9CPmDfdYKNR","rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":"$@3"}],["$","div",null,{"hidden":true,"children":["$","$L4",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":"$@6"}]}]}],null]}],"loading":null,"isPartial":false}
+0:{"buildId":"WsQ-4ZzLnJDr3Ebj_awEQ","rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":"$@3"}],["$","div",null,{"hidden":true,"children":["$","$L4",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":"$@6"}]}]}],null]}],"loading":null,"isPartial":false}
 3:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 6:[["$","title","0",{"children":"mako_wis.dev"}],["$","meta","1",{"name":"description","content":"mako_wisのポートフォリオサイト"}],["$","link","2",{"rel":"icon","href":"/favicon.ico?favicon.bff0c901.ico","sizes":"48x48","type":"image/x-icon"}],["$","link","3",{"rel":"icon","href":"/icon.svg?icon.fc1eb859.svg","sizes":"any","type":"image/svg+xml"}],["$","link","4",{"rel":"apple-touch-icon","href":"/apple-icon.png?apple-icon.8ee4894c.png","sizes":"180x180","type":"image/png"}],["$","$L7","5",{}]]
