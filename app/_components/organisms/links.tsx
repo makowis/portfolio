@@ -2,63 +2,30 @@ import React, { FC } from 'react';
 import Section from '../atoms/section';
 import styles from '../../../styles/links.module.scss';
 
+type LinkItem = {
+  name: string;
+  url: string;
+};
+
+const items: LinkItem[] = [
+  { name: 'Twitter', url: 'https://twitter.com/mako_wis' },
+  { name: 'Facebook', url: 'https://www.facebook.com/makoto.henmi' },
+  { name: 'Instagram', url: 'https://www.instagram.com/mako_wis/' },
+  { name: 'GitHub', url: 'https://github.com/makowis' },
+  { name: 'Speaker Deck', url: 'https://speakerdeck.com/makowis' },
+  { name: 'Blog', url: 'https://mako-wis.hatenablog.com/' },
+];
+
 const Links: FC = () => (
   <Section title="Links">
     <ul className={styles.links}>
-      <li>
-        <a
-          href="https://twitter.com/mako_wis"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Twitter
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://www.facebook.com/makoto.henmi"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Facebook
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://www.instagram.com/mako_wis/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Instagram
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/makowis"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://speakerdeck.com/makowis"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Speaker Deck
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://mako-wis.hatenablog.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Blog
-        </a>
-      </li>
+      {items.map((item) => (
+        <li key={item.name}>
+          <a href={item.url} target="_blank" rel="noopener noreferrer">
+            {item.name}
+          </a>
+        </li>
+      ))}
     </ul>
   </Section>
 );
