@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import type { Metadata } from 'next';
 import { Inter, Noto_Sans_JP } from 'next/font/google';
-import Footer from './_layout/footer';
+import Footer from './_components/organisms/footer';
 import styles from '../styles/layout.module.scss';
 import '../styles/globals.css';
 

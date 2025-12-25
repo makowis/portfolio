@@ -13,10 +13,10 @@ exports[`renders correctly 1`] = `
     ポートフォリオサイトという名のリンク集
   </p>
   <section
-    class="subSection"
+    class="container"
   >
     <h2
-      class="subTitle"
+      class="title"
     >
       Links
     </h2>
@@ -78,6 +78,119 @@ exports[`renders correctly 1`] = `
         </a>
       </li>
     </ul>
+  </section>
+  <section
+    class="container"
+  >
+    <h2
+      class="title"
+    >
+      Skills
+    </h2>
+    <div
+      class="category"
+    >
+      <h3
+        class="categoryTitle"
+      >
+        Language
+      </h3>
+      <ul
+        class="list"
+      >
+        <li
+          class="item"
+        >
+          TypeScript
+        </li>
+        <li
+          class="item"
+        >
+          Ruby
+        </li>
+        <li
+          class="item"
+        >
+          Java
+        </li>
+      </ul>
+    </div>
+    <div
+      class="category"
+    >
+      <h3
+        class="categoryTitle"
+      >
+        Application Framework
+      </h3>
+      <ul
+        class="list"
+      >
+        <li
+          class="item"
+        >
+          React
+        </li>
+        <li
+          class="item"
+        >
+          Next.js
+        </li>
+        <li
+          class="item"
+        >
+          Vue.js
+        </li>
+        <li
+          class="item"
+        >
+          Nuxt.js
+        </li>
+        <li
+          class="item"
+        >
+          Ruby on Rails
+        </li>
+        <li
+          class="item"
+        >
+          Spring Framework
+        </li>
+      </ul>
+    </div>
+    <div
+      class="category"
+    >
+      <h3
+        class="categoryTitle"
+      >
+        DevOps / Cloud
+      </h3>
+      <ul
+        class="list"
+      >
+        <li
+          class="item"
+        >
+          Amazon Web Services
+        </li>
+        <li
+          class="item"
+        >
+          Docker
+        </li>
+        <li
+          class="item"
+        >
+          GitHub Actions
+        </li>
+        <li
+          class="item"
+        >
+          Mackerel
+        </li>
+      </ul>
+    </div>
   </section>
 </div>
 `;
