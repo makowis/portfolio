@@ -14,7 +14,7 @@ exports[`renders correctly 1`] = `
         data-nimg="1"
         decoding="async"
         height="120"
-        src="/icon.svg"
+        src="/icon.svg?v=2"
         style="color: transparent;"
         width="120"
       />
