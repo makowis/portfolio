@@ -6,7 +6,7 @@ const Hero: FC = () => (
   <div className={styles.container}>
     <div className={styles.iconWrapper}>
       <Image
-        src="/me.png"
+        src="/icon.svg"
         alt="Hennmi Makoto"
         width={120}
         height={120}
