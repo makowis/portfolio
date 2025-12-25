@@ -9,7 +9,7 @@ exports[`renders correctly 1`] = `
       class="iconWrapper"
     >
       <img
-        alt="Hennmi Makoto"
+        alt="Henmi Makoto"
         class="icon"
         data-nimg="1"
         decoding="async"
@@ -22,7 +22,7 @@ exports[`renders correctly 1`] = `
     <h1
       class="title"
     >
-      Hennmi Makoto
+      Henmi Makoto
     </h1>
     <p
       class="description"

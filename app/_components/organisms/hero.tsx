@@ -7,14 +7,14 @@ const Hero: FC = () => (
     <div className={styles.iconWrapper}>
       <Image
         src="/icon.svg?v=2"
-        alt="Hennmi Makoto"
+        alt="Henmi Makoto"
         width={120}
         height={120}
         className={styles.icon}
         priority
       />
     </div>
-    <h1 className={styles.title}>Hennmi Makoto</h1>
+    <h1 className={styles.title}>Henmi Makoto</h1>
     <p className={styles.description}>ポートフォリオサイトという名のリンク集</p>
   </div>
 );
