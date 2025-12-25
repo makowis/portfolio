@@ -7,7 +7,7 @@ import styles from '../../../styles/contributions.module.scss';
 
 const GitHubCalendar = dynamic(
   () => import('react-github-calendar').then((mod) => mod.GitHubCalendar),
-  { ssr: false }
+  { ssr: false },
 );
 
 const Contributions: FC = () => (
@@ -20,6 +20,15 @@ const Contributions: FC = () => (
         fontSize={14}
         colorScheme="light"
       />
+    </div>
+    <div className={styles.link}>
+      <a
+        href="https://github.com/makowis"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        @makowis on GitHub
+      </a>
     </div>
   </Section>
 );
