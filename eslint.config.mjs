@@ -3,13 +3,7 @@ import nextConfig from 'eslint-config-next';
 const eslintConfig = [
   ...nextConfig,
   {
-    ignores: [
-      'out/*',
-      '.next/*',
-      '.idea/*',
-      'node_modules/*',
-      'coverage/*',
-    ],
+    ignores: ['out/*', '.next/*', '.idea/*', 'node_modules/*', 'coverage/*'],
   },
 ];
 
