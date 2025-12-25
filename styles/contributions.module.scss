@@ -1,13 +1,13 @@
 .container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   padding: 1rem 0;
   overflow-x: auto;
   max-width: 100%;
 }
 
 .link {
-  text-align: left;
+  text-align: center;
   margin-top: 0.5rem;
 
   a {
