@@ -13,7 +13,10 @@ describe('Layout', () => {
 
   it('has correct metadata', async () => {
     const { metadata } = await import('../../app/layout');
-    expect(metadata.title).toBe('mako_wis.dev');
+    expect(metadata.title).toEqual({
+      default: 'mako_wis.dev',
+      template: '%s | mako_wis.dev',
+    });
     expect(metadata.description).toBe('mako_wisのポートフォリオサイト');
   });
 });

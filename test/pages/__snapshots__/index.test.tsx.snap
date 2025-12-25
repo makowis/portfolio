@@ -26,6 +26,8 @@ exports[`renders correctly 1`] = `
       <li>
         <a
           href="https://twitter.com/mako_wis"
+          rel="noopener noreferrer"
+          target="_blank"
         >
           Twitter
         </a>
@@ -33,6 +35,8 @@ exports[`renders correctly 1`] = `
       <li>
         <a
           href="https://www.facebook.com/makoto.henmi"
+          rel="noopener noreferrer"
+          target="_blank"
         >
           Facebook
         </a>
@@ -40,6 +44,8 @@ exports[`renders correctly 1`] = `
       <li>
         <a
           href="https://www.instagram.com/mako_wis/"
+          rel="noopener noreferrer"
+          target="_blank"
         >
           Instagram
         </a>
@@ -47,6 +53,8 @@ exports[`renders correctly 1`] = `
       <li>
         <a
           href="https://github.com/makowis"
+          rel="noopener noreferrer"
+          target="_blank"
         >
           GitHub
         </a>
@@ -54,6 +62,8 @@ exports[`renders correctly 1`] = `
       <li>
         <a
           href="https://speakerdeck.com/makowis"
+          rel="noopener noreferrer"
+          target="_blank"
         >
           Speaker Deck
         </a>
@@ -61,6 +71,8 @@ exports[`renders correctly 1`] = `
       <li>
         <a
           href="https://mako-wis.hatenablog.com/"
+          rel="noopener noreferrer"
+          target="_blank"
         >
           Blog
         </a>
