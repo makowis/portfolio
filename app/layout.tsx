@@ -1,8 +1,21 @@
 import React, { FC } from 'react';
 import type { Metadata } from 'next';
+import { Inter, Noto_Sans_JP } from 'next/font/google';
 import Footer from './_layout/footer';
 import styles from '../styles/layout.module.scss';
 import '../styles/globals.css';
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+});
+
+const notoSansJP = Noto_Sans_JP({
+  subsets: ['latin'],
+  variable: '--font-noto-sans-jp',
+  display: 'swap',
+});
 
 type Props = {
   children: React.ReactNode;
@@ -31,7 +44,7 @@ export const metadata: Metadata = {
 };
 
 const Layout: FC<Props> = ({ children }) => (
-  <html lang="ja">
+  <html lang="ja" className={`${inter.variable} ${notoSansJP.variable}`}>
     <body>
       <div className={styles.container}>
         <main className={styles.main}>{children}</main>
