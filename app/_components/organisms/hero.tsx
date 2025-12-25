@@ -15,7 +15,7 @@ const Hero: FC = () => (
       />
     </div>
     <h1 className={styles.title}>Hennmi Makoto</h1>
-    <p className={styles.description}>makowis.dev</p>
+    <p className={styles.description}>ポートフォリオサイトという名のリンク集</p>
   </div>
 );
 
