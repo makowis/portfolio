@@ -233,8 +233,180 @@ exports[`renders correctly 1`] = `
       </a>
     </div>
   </section>
-  <div>
-    Mocked Instagram
-  </div>
+  <section
+    class="container"
+  >
+    <h2
+      class="title"
+    >
+      Instagram
+    </h2>
+    <div
+      class="grid"
+    >
+      <a
+        class="item"
+        href="https://www.instagram.com/mako_wis/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img
+          alt="Instagram Post 1"
+          class="image"
+          data-nimg="1"
+          decoding="async"
+          height="300"
+          loading="lazy"
+          src="/icon.svg"
+          style="color: transparent;"
+          width="300"
+        />
+      </a>
+      <a
+        class="item"
+        href="https://www.instagram.com/mako_wis/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img
+          alt="Instagram Post 2"
+          class="image"
+          data-nimg="1"
+          decoding="async"
+          height="300"
+          loading="lazy"
+          src="/icon.svg"
+          style="color: transparent;"
+          width="300"
+        />
+      </a>
+      <a
+        class="item"
+        href="https://www.instagram.com/mako_wis/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img
+          alt="Instagram Post 3"
+          class="image"
+          data-nimg="1"
+          decoding="async"
+          height="300"
+          loading="lazy"
+          src="/icon.svg"
+          style="color: transparent;"
+          width="300"
+        />
+      </a>
+      <a
+        class="item"
+        href="https://www.instagram.com/mako_wis/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img
+          alt="Instagram Post 4"
+          class="image"
+          data-nimg="1"
+          decoding="async"
+          height="300"
+          loading="lazy"
+          src="/icon.svg"
+          style="color: transparent;"
+          width="300"
+        />
+      </a>
+      <a
+        class="item"
+        href="https://www.instagram.com/mako_wis/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img
+          alt="Instagram Post 5"
+          class="image"
+          data-nimg="1"
+          decoding="async"
+          height="300"
+          loading="lazy"
+          src="/icon.svg"
+          style="color: transparent;"
+          width="300"
+        />
+      </a>
+      <a
+        class="item"
+        href="https://www.instagram.com/mako_wis/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img
+          alt="Instagram Post 6"
+          class="image"
+          data-nimg="1"
+          decoding="async"
+          height="300"
+          loading="lazy"
+          src="/icon.svg"
+          style="color: transparent;"
+          width="300"
+        />
+      </a>
+      <a
+        class="item"
+        href="https://www.instagram.com/mako_wis/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img
+          alt="Instagram Post 7"
+          class="image"
+          data-nimg="1"
+          decoding="async"
+          height="300"
+          loading="lazy"
+          src="/icon.svg"
+          style="color: transparent;"
+          width="300"
+        />
+      </a>
+      <a
+        class="item"
+        href="https://www.instagram.com/mako_wis/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img
+          alt="Instagram Post 8"
+          class="image"
+          data-nimg="1"
+          decoding="async"
+          height="300"
+          loading="lazy"
+          src="/icon.svg"
+          style="color: transparent;"
+          width="300"
+        />
+      </a>
+      <a
+        class="item"
+        href="https://www.instagram.com/mako_wis/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img
+          alt="Instagram Post 9"
+          class="image"
+          data-nimg="1"
+          decoding="async"
+          height="300"
+          loading="lazy"
+          src="/icon.svg"
+          style="color: transparent;"
+          width="300"
+        />
+      </a>
+    </div>
+  </section>
 </div>
 `;
