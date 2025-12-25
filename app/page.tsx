@@ -9,22 +9,58 @@ const Page: FC = () => (
       <h2 className={styles.subTitle}>Links</h2>
       <ul className={styles.links}>
         <li>
-          <a href="https://twitter.com/mako_wis">Twitter</a>
+          <a
+            href="https://twitter.com/mako_wis"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Twitter
+          </a>
         </li>
         <li>
-          <a href="https://www.facebook.com/makoto.henmi">Facebook</a>
+          <a
+            href="https://www.facebook.com/makoto.henmi"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Facebook
+          </a>
         </li>
         <li>
-          <a href="https://www.instagram.com/mako_wis/">Instagram</a>
+          <a
+            href="https://www.instagram.com/mako_wis/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagram
+          </a>
         </li>
         <li>
-          <a href="https://github.com/makowis">GitHub</a>
+          <a
+            href="https://github.com/makowis"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
         </li>
         <li>
-          <a href="https://speakerdeck.com/makowis">Speaker Deck</a>
+          <a
+            href="https://speakerdeck.com/makowis"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Speaker Deck
+          </a>
         </li>
         <li>
-          <a href="https://mako-wis.hatenablog.com/">Blog</a>
+          <a
+            href="https://mako-wis.hatenablog.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Blog
+          </a>
         </li>
       </ul>
     </section>

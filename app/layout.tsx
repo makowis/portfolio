@@ -9,8 +9,25 @@ type Props = {
 };
 
 export const metadata: Metadata = {
-  title: 'mako_wis.dev',
+  title: {
+    default: 'mako_wis.dev',
+    template: '%s | mako_wis.dev',
+  },
   description: 'mako_wisのポートフォリオサイト',
+  openGraph: {
+    title: 'mako_wis.dev',
+    description: 'mako_wisのポートフォリオサイト',
+    url: 'https://makowis.dev',
+    siteName: 'mako_wis.dev',
+    locale: 'ja_JP',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'mako_wis.dev',
+    description: 'mako_wisのポートフォリオサイト',
+    creator: '@mako_wis',
+  },
 };
 
 const Layout: FC<Props> = ({ children }) => (
