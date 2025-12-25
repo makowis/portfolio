@@ -8,11 +8,13 @@
   color: #666;
   border-bottom: 1px solid #eee;
   padding-bottom: 0.2rem;
+  text-align: center;
 }
 
 .list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.5rem;
   list-style: none;
   padding: 0;
