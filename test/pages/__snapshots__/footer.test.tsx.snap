@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Footer renders correctly 1`] = `
+<div>
+  <footer
+    class="footer"
+  >
+    <a
+      href="https://github.com/makowis"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Powered by mako_wis
+    </a>
+  </footer>
+</div>
+`;
