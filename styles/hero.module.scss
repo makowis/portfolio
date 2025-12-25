@@ -1,13 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.iconWrapper {
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 120px;
+  height: 120px;
+  border: 2px solid #eaeaea;
+}
+
+.icon {
+  object-fit: cover;
+}
+
 .title {
   margin: 0 {
     bottom: 10px;
   }
   line-height: 1.15;
-  font-size: 4rem;
-  letter-spacing: 0.1em;
+  font-size: 2.5rem;
+  letter-spacing: 0.05em;
   word-break: break-all;
 }
 
 .description {
-  margin: 10px 0 20px;
+  margin: 0;
+  font-size: 1.2rem;
+  color: #666;
 }

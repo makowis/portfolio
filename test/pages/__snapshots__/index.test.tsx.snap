@@ -2,16 +2,34 @@
 
 exports[`renders correctly 1`] = `
 <div>
-  <h1
-    class="title"
+  <div
+    class="container"
   >
-    makowis.dev
-  </h1>
-  <p
-    class="description"
-  >
-    ポートフォリオサイトという名のリンク集
-  </p>
+    <div
+      class="iconWrapper"
+    >
+      <img
+        alt="Henmi Makoto"
+        class="icon"
+        data-nimg="1"
+        decoding="async"
+        height="120"
+        src="/icon.svg?v=2"
+        style="color: transparent;"
+        width="120"
+      />
+    </div>
+    <h1
+      class="title"
+    >
+      Henmi Makoto
+    </h1>
+    <p
+      class="description"
+    >
+      ポートフォリオサイトという名のリンク集
+    </p>
+  </div>
   <section
     class="container"
   >
