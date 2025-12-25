@@ -9,16 +9,16 @@ Next.js (App Router) を使用した静的サイトで、GitHub Pagesにデプ�
 
 ## 技術スタック
 
-| カテゴリ | 技術 |
-|---------|------|
-| フレームワーク | Next.js 16 (App Router) |
-| 言語 | TypeScript 5.9 |
-| UI | React 19 |
-| スタイリング | SCSS Modules + CSS |
-| テスト | Jest 30 + React Testing Library |
-| リンター | ESLint 9 + Prettier |
-| パッケージマネージャー | Yarn 4 (Berry) |
-| デプロイ | GitHub Pages (GitHub Actions) |
+| カテゴリ               | 技術                            |
+| ---------------------- | ------------------------------- |
+| フレームワーク         | Next.js 16 (App Router)         |
+| 言語                   | TypeScript 5.9                  |
+| UI                     | React 19                        |
+| スタイリング           | SCSS Modules + CSS              |
+| テスト                 | Jest 30 + React Testing Library |
+| リンター               | ESLint 9 + Prettier             |
+| パッケージマネージャー | Yarn 4 (Berry)                  |
+| デプロイ               | GitHub Pages (GitHub Actions)   |
 
 ## ディレクトリ構造
 
@@ -44,6 +44,7 @@ portfolio/
 ### TypeScript / React
 
 - **関数コンポーネント**: `FC` 型を使用する
+
   ```tsx
   import React, { FC } from 'react';
   const Component: FC = () => <div>...</div>;
@@ -51,6 +52,7 @@ portfolio/
   ```
 
 - **Props型定義**: コンポーネントファイル内で `type Props` として定義
+
   ```tsx
   type Props = {
     children: React.ReactNode;
@@ -90,15 +92,15 @@ it('renders correctly', () => {
 
 ## コマンド
 
-| コマンド | 説明 |
-|---------|------|
-| `yarn dev` | 開発サーバー起動 |
-| `yarn build` | 本番ビルド（静的エクスポート） |
-| `yarn start` | 本番サーバー起動 |
-| `yarn lint` | ESLint + Prettier チェック |
-| `yarn lint:fix` | リント自動修正 |
-| `yarn test` | テスト実行 |
-| `yarn test:watch` | テストウォッチモード |
+| コマンド          | 説明                           |
+| ----------------- | ------------------------------ |
+| `yarn dev`        | 開発サーバー起動               |
+| `yarn build`      | 本番ビルド（静的エクスポート） |
+| `yarn start`      | 本番サーバー起動               |
+| `yarn lint`       | ESLint + Prettier チェック     |
+| `yarn lint:fix`   | リント自動修正                 |
+| `yarn test`       | テスト実行                     |
+| `yarn test:watch` | テストウォッチモード           |
 
 ## 重要な設定
 
@@ -150,9 +152,7 @@ import React, { FC } from 'react';
 import styles from '../../styles/componentName.module.scss';
 
 const ComponentName: FC = () => (
-  <div className={styles.container}>
-    {/* コンテンツ */}
-  </div>
+  <div className={styles.container}>{/* コンテンツ */}</div>
 );
 
 export default ComponentName;
