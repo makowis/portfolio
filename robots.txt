@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://makowis.dev/sitemap.xml
