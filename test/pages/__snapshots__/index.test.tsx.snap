@@ -192,5 +192,28 @@ exports[`renders correctly 1`] = `
       </ul>
     </div>
   </section>
+  <section
+    class="container"
+  >
+    <h2
+      class="title"
+    >
+      Contributions
+    </h2>
+    <div
+      class="container"
+    />
+    <div
+      class="link"
+    >
+      <a
+        href="https://github.com/makowis"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        @makowis on GitHub
+      </a>
+    </div>
+  </section>
 </div>
 `;
