@@ -163,3 +163,20 @@ export default ComponentName;
 - Codecov でカバレッジ計測
 - GitHub Actions + GitHub Pages で自動デプロイ（mainブランチ）
 - `peaceiris/actions-gh-pages` を使用して `out/` ディレクトリをデプロイ
+
+## プルリクエスト作成前の必須チェック
+
+**プルリクエストを作成する前に、必ず以下のコマンドを実行してすべてパスすることを確認すること：**
+
+```bash
+# 1. テスト実行
+yarn test
+
+# 2. Lint チェック
+yarn lint
+
+# 3. ビルド確認
+yarn build
+```
+
+すべてのチェックが通らない限り、プルリクエストを作成してはいけない。
