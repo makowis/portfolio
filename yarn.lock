@@ -6734,7 +6734,7 @@ __metadata:
     prettier: "npm:^3.7.4"
     react: "npm:^19.2.3"
     react-dom: "npm:^19.2.3"
-    react-github-calendar: "npm:^5.0.3"
+    react-github-calendar: "npm:^5.0.4"
     sass: "npm:^1.97.1"
     ts-jest: "npm:^29.4.6"
     ts-node: "npm:^10.9.2"
@@ -6859,15 +6859,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-activity-calendar@npm:^3.0.4":
-  version: 3.0.4
-  resolution: "react-activity-calendar@npm:3.0.4"
+"react-activity-calendar@npm:^3.0.5":
+  version: 3.0.5
+  resolution: "react-activity-calendar@npm:3.0.5"
   dependencies:
     "@floating-ui/react": "npm:^0.27.12"
     date-fns: "npm:^4.1.0"
   peerDependencies:
     react: ^18.0.0 || ^19.0.0
-  checksum: 10c0/ef42257f172ba533e51f0591f4a80434cc115bc688d4f2c39629e2bbd75d5a2c7d3ab0a1574411f9deedb62f10c49c17acbee7374d7f8a53acfd3c9956489dd3
+  checksum: 10c0/f6aff7a2213e22b94f5476c116c70b8c37c0e2362d044beeafc67e454124d44a5aec74cc5cc2ee65b61b18b8ff0cf5b5081cc4c4734db964b417af06f83f18a9
   languageName: node
   linkType: hard
 
@@ -6882,14 +6882,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-github-calendar@npm:^5.0.3":
-  version: 5.0.3
-  resolution: "react-github-calendar@npm:5.0.3"
+"react-github-calendar@npm:^5.0.4":
+  version: 5.0.4
+  resolution: "react-github-calendar@npm:5.0.4"
   dependencies:
-    react-activity-calendar: "npm:^3.0.4"
+    react-activity-calendar: "npm:^3.0.5"
   peerDependencies:
     react: ^18.0.0 || ^19.0.0
-  checksum: 10c0/b69f590024ad49cea7d1f3095d1b4d72701891d8bd1de649a2155a2465b678f473d4497d1629dec1c735298d5457f77409d5b7b393ab3e90d0e110725bd1817e
+  checksum: 10c0/ba45f26791696d19bd151b2cf068206e11d22468accfd7839a00bdc3e2c3f8e5f16a3d27815fc23ab7815fbcab0a4f0e800898b03d96557570066ef586180178
   languageName: node
   linkType: hard
 
