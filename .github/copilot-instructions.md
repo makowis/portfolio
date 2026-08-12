@@ -24,19 +24,30 @@ Next.js (App Router) を使用した静的サイトで、GitHub Pagesにデプ�
 
 ```
 portfolio/
-├── app/                    # Next.js App Router
-│   ├── layout.tsx          # ルートレイアウト
-│   ├── page.tsx            # トップページ
-│   └── _layout/            # レイアウトコンポーネント
-│       └── footer.tsx      # フッター
-├── styles/                 # スタイルファイル
-│   ├── globals.css         # グローバルスタイル
-│   ├── *.module.css        # CSSモジュール
-├── test/                   # テストファイル
-│   └── pages/              # ページテスト
-├── public/                 # 静的ファイル
-└── config/                 # 設定ファイル
-    └── jest/               # Jest関連設定
+├── app/                        # Next.js App Router
+│   ├── layout.tsx              # ルートレイアウト
+│   ├── page.tsx                # トップページ
+│   ├── robots.ts               # robots.txt を生成
+│   ├── sitemap.ts              # sitemap.xml を生成
+│   ├── icon.svg                # ファビコン（favicon.ico / apple-icon.png も同階層）
+│   └── _components/            # UIコンポーネント（ルーティング対象外）
+│       ├── atoms/              # 最小単位のコンポーネント
+│       │   └── section.tsx
+│       └── organisms/          # ページを構成するブロック
+│           ├── contributions.tsx
+│           ├── footer.tsx
+│           ├── hero.tsx
+│           ├── links.tsx
+│           └── skills.tsx
+├── styles/                     # スタイルファイル
+│   ├── globals.css             # グローバルスタイル
+│   └── *.module.css            # CSSモジュール
+├── test/                       # テストファイル
+│   ├── tsconfig.jest.json      # テスト用TypeScript設定
+│   └── pages/                  # テスト本体とスナップショット
+├── public/                     # 静的ファイル（CNAME, .nojekyll）
+└── config/                     # 設定ファイル
+    └── jest/                   # Jest関連設定
 ```
 
 ## コーディング規約
@@ -125,9 +136,11 @@ it('renders correctly', () => {
 
 2. **App Router**: `pages/` ディレクトリではなく `app/` ディレクトリを使用
 
-3. **レイアウトコンポーネント**: 共通レイアウトは `app/_layout/` に配置（アンダースコアプレフィックスでルーティング対象外）
+3. **コンポーネント配置**: UIコンポーネントは `app/_components/` に配置（アンダースコアプレフィックスでルーティング対象外）。Atomic Design に沿って、最小単位は `atoms/`、ページを構成するブロックは `organisms/` へ置く
 
 4. **メタデータ**: `layout.tsx` で `Metadata` 型を使用してSEO設定
+
+5. **robots.txt / sitemap.xml**: `app/robots.ts` と `app/sitemap.ts` で生成する。静的エクスポートのため `export const dynamic = 'force-static'` が必須
 
 ## 新規ファイル作成時のテンプレート
 
