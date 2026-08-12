@@ -43,7 +43,6 @@ portfolio/
 │   ├── globals.css             # グローバルスタイル
 │   └── *.module.css            # CSSモジュール
 ├── test/                       # テストファイル
-│   ├── tsconfig.jest.json      # テスト用TypeScript設定
 │   └── pages/                  # テスト本体とスナップショット
 ├── public/                     # 静的ファイル（CNAME, .nojekyll）
 └── config/                     # 設定ファイル
