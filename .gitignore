@@ -2,8 +2,6 @@
 
 # dependencies
 /node_modules
-/.pnp
-.pnp.js
 
 # testing
 /coverage
@@ -11,9 +9,7 @@
 # next.js
 /.next/
 /out/
-
-# production
-/build
+.swc/
 
 # misc
 .DS_Store
@@ -29,9 +25,6 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
-
-# vercel
-.vercel
 
 # IDEA
 .idea
