@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import Section from '../atoms/section';
-import styles from '../../../styles/skills.module.scss';
+import styles from '../../../styles/skills.module.css';
 
 type SkillCategory = {
   name: string;

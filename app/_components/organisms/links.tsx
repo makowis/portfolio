@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import Section from '../atoms/section';
-import styles from '../../../styles/links.module.scss';
+import styles from '../../../styles/links.module.css';
 
 type LinkItem = {
   name: string;
