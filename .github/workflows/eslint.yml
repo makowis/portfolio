@@ -2,6 +2,9 @@ name: eslint
 on:
   pull_request:
     types: [opened, synchronize]
+permissions:
+  contents: read
+  pull-requests: write
 jobs:
   eslint:
     name: eslint
@@ -9,13 +12,19 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - name: Setup Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: '24'
       - name: yarn enable
         run: corepack enable
+      # Corepack で Yarn 4 を有効化した後でないと Yarn 1 のキャッシュ位置が使われる
+      - name: Configure Yarn cache
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: 'yarn'
       - name: yarn install
-        run: yarn install
+        run: yarn install --immutable
       - name: eslint review
         uses: reviewdog/action-eslint@v1
         with:
