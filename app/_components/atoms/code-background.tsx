@@ -43,19 +43,50 @@ export const featured = (skills: Skill[]): Skill[] =>
   5 tests passed
   Exported 7 static routes`,
   },
+  {
+    id: 'sitemap',
+    code: `export const dynamic = 'force-static';
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  return [{ url: 'https://makowis.dev', priority: 1 }];
+}`,
+  },
+  {
+    id: 'test',
+    code: `it('renders correctly', () => {
+  const { container } = render(<Page />);
+
+  expect(container).toMatchSnapshot();
+});`,
+  },
+  {
+    id: 'workflow',
+    code: `jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - run: yarn build`,
+  },
 ];
 
-// The snippets are repeated so the texture keeps filling a tall page.
-const LAYER_COUNT = 3;
+// Repeating the snippets fills a tall page; fixed shuffles hide the loop.
+const layers: number[][] = [
+  [0, 1, 2, 3, 4, 5, 6],
+  [5, 2, 6, 0, 4, 1, 3],
+];
 
 const CodeBackground: FC = () => (
   <div className={styles.container} aria-hidden="true">
     <div className={styles.glow} />
     <div className={styles.snippets}>
-      {Array.from({ length: LAYER_COUNT }, (_, layer) =>
-        snippets.map((snippet) => (
-          <pre key={`${layer}-${snippet.id}`} className={styles.snippet}>
-            {snippet.code}
+      {layers.flatMap((order, layer) =>
+        order.map((index) => (
+          <pre
+            key={`${layer}-${snippets[index].id}`}
+            className={styles.snippet}
+          >
+            {snippets[index].code}
           </pre>
         )),
       )}

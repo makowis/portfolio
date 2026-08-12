@@ -55,6 +55,23 @@
     justify-self: end;
   }
 
+  /* Offsets break up the grid so the repeated snippets look scattered. */
+  &:nth-child(5n + 2) {
+    margin-inline-start: 3rem;
+  }
+
+  &:nth-child(5n + 4) {
+    margin-inline-end: 4rem;
+  }
+
+  &:nth-child(3n + 2) {
+    margin-block-start: 2.5rem;
+  }
+
+  &:nth-child(4n + 3) {
+    margin-block-start: -2rem;
+  }
+
   &:nth-child(3n + 1) {
     color: var(--color-accent-cyan);
   }
@@ -89,6 +106,15 @@
 
   .snippet {
     font-size: 0.7rem;
+
+    /* Right aligning a wide block would push its start off screen. */
+    &:nth-child(even) {
+      justify-self: start;
+    }
+
+    &:nth-child(5n + 2) {
+      margin-inline-start: 1.5rem;
+    }
   }
 }
 
