@@ -11,8 +11,9 @@ const GitHubCalendar = dynamic(
   { ssr: false },
 );
 
+// The empty level stays well above the card background so it reads as a block.
 const calendarTheme = {
-  dark: ['#111b2e', '#1e3a5f', '#0e7490', '#22d3ee', '#5eead4'],
+  dark: ['#37455f', '#14657f', '#0e9bb8', '#22d3ee', '#7ef3e0'],
 };
 
 const Contributions: FC = () => (

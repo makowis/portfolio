@@ -7,12 +7,6 @@
   color: var(--color-text-muted);
 }
 
-/* Lightening the gaps between blocks makes the empty level readable. */
-.container svg {
-  background: rgb(255 255 255 / 10%);
-  border-radius: 8px;
-}
-
 .link {
   text-align: center;
   margin-top: 0.5rem;
