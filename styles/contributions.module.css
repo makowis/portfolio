@@ -7,6 +7,17 @@
   color: var(--color-text-muted);
 }
 
+/* The library sets stroke inline, so !important is needed to override it. */
+.container rect {
+  stroke: rgb(255 255 255 / 16%) !important;
+  stroke-width: 1px;
+}
+
+/* Without a border the empty level is indistinguishable from the background. */
+.container rect[data-level='0'] {
+  stroke: rgb(255 255 255 / 28%) !important;
+}
+
 .link {
   text-align: center;
   margin-top: 0.5rem;
