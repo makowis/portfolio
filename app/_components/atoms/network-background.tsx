@@ -8,47 +8,70 @@ type Node = {
 
 const VIEW_BOX_WIDTH = 1200;
 const VIEW_BOX_HEIGHT = 800;
-const EDGE_DISTANCE_THRESHOLD = 235;
+const NEIGHBOR_COUNT = 3;
 
+// Irregular positions keep the mesh from reading as a repeating grid.
 const nodes: Node[] = [
-  { x: 60, y: 78 },
-  { x: 182, y: 158 },
-  { x: 302, y: 56 },
-  { x: 424, y: 182 },
-  { x: 545, y: 92 },
-  { x: 664, y: 204 },
-  { x: 786, y: 68 },
-  { x: 902, y: 172 },
-  { x: 1024, y: 62 },
-  { x: 1142, y: 188 },
-  { x: 118, y: 322 },
-  { x: 258, y: 402 },
-  { x: 398, y: 330 },
-  { x: 556, y: 418 },
-  { x: 702, y: 352 },
-  { x: 842, y: 432 },
-  { x: 978, y: 344 },
-  { x: 1124, y: 424 },
-  { x: 82, y: 598 },
-  { x: 224, y: 702 },
-  { x: 362, y: 622 },
-  { x: 502, y: 718 },
-  { x: 642, y: 638 },
-  { x: 784, y: 730 },
-  { x: 922, y: 648 },
-  { x: 1062, y: 722 },
-  { x: 1176, y: 606 },
+  { x: 42, y: 118 },
+  { x: 168, y: 46 },
+  { x: 214, y: 236 },
+  { x: 96, y: 330 },
+  { x: 312, y: 128 },
+  { x: 388, y: 292 },
+  { x: 268, y: 402 },
+  { x: 148, y: 486 },
+  { x: 36, y: 560 },
+  { x: 92, y: 690 },
+  { x: 236, y: 618 },
+  { x: 348, y: 726 },
+  { x: 430, y: 546 },
+  { x: 512, y: 388 },
+  { x: 466, y: 174 },
+  { x: 574, y: 62 },
+  { x: 662, y: 226 },
+  { x: 604, y: 460 },
+  { x: 528, y: 664 },
+  { x: 640, y: 762 },
+  { x: 742, y: 604 },
+  { x: 806, y: 402 },
+  { x: 728, y: 96 },
+  { x: 862, y: 168 },
+  { x: 946, y: 318 },
+  { x: 884, y: 528 },
+  { x: 812, y: 716 },
+  { x: 964, y: 664 },
+  { x: 1058, y: 486 },
+  { x: 1096, y: 246 },
+  { x: 1010, y: 76 },
+  { x: 1158, y: 118 },
+  { x: 1174, y: 372 },
+  { x: 1128, y: 610 },
+  { x: 1044, y: 758 },
+  { x: 1180, y: 726 },
 ];
 
-const edges: [number, number][] = nodes.flatMap((from, fromIndex) =>
-  nodes
-    .slice(fromIndex + 1)
-    .map((to, offset): [number, number] => [fromIndex, fromIndex + 1 + offset])
-    .filter(([, toIndex]) => {
-      const to = nodes[toIndex];
-      return Math.hypot(to.x - from.x, to.y - from.y) < EDGE_DISTANCE_THRESHOLD;
-    }),
-);
+const toEdgeKey = (a: number, b: number): string =>
+  a < b ? `${a}-${b}` : `${b}-${a}`;
+
+// Connect each node to its nearest neighbours so the mesh stays irregular.
+const edges: [number, number][] = Array.from(
+  new Set(
+    nodes.flatMap((from, fromIndex) =>
+      nodes
+        .map((to, toIndex) => ({
+          toIndex,
+          distance: Math.hypot(to.x - from.x, to.y - from.y),
+        }))
+        .filter(({ toIndex }) => toIndex !== fromIndex)
+        .sort((a, b) => a.distance - b.distance)
+        .slice(0, NEIGHBOR_COUNT)
+        .map(({ toIndex }) => toEdgeKey(fromIndex, toIndex)),
+    ),
+  ),
+).map((key): [number, number] => {
+  const [fromIndex, toIndex] = key.split('-').map(Number);
+  return [fromIndex, toIndex];
+});
 
 const NetworkBackground: FC = () => (
   <div className={styles.container} aria-hidden="true">
@@ -84,7 +107,7 @@ const NetworkBackground: FC = () => (
             className={styles.node}
             cx={node.x}
             cy={node.y}
-            r={2 + (index % 3)}
+            r={1.5 + (index % 3)}
             style={{ animationDelay: `${(index % 7) * 0.45}s` }}
           />
         ))}

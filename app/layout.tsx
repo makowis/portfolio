@@ -48,10 +48,15 @@ export const metadata: Metadata = {
 const Layout: FC<Props> = ({ children }) => (
   <html lang="ja" className={`${inter.variable} ${notoSansJP.variable}`}>
     <body>
+      <a href="#main-content" className={styles.skipLink}>
+        メインコンテンツへスキップ
+      </a>
       <div className={styles.container}>
         <NetworkBackground />
         <div className={styles.content}>
-          <main className={styles.main}>{children}</main>
+          <main id="main-content" className={styles.main}>
+            {children}
+          </main>
           <Footer />
         </div>
       </div>

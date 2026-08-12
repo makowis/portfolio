@@ -43,7 +43,7 @@
 
   &:hover {
     background: var(--color-surface-hover);
-    border-color: rgb(74 222 128 / 55%);
-    box-shadow: 0 0 16px rgb(74 222 128 / 22%);
+    border-color: var(--color-accent-green);
+    box-shadow: 0 0 16px rgb(134 239 172 / 22%);
   }
 }

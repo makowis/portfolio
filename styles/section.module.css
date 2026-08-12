@@ -9,12 +9,13 @@
 }
 
 .title {
-  margin: 0 0 1.5rem;
+  width: fit-content;
+  margin: 0 auto 1.5rem;
   font-size: clamp(1.6rem, 5vw, 2.25rem);
   font-weight: 700;
   letter-spacing: 0.02em;
   text-align: center;
-  background: var(--gradient-frame);
+  background: var(--gradient-text);
   background-clip: text;
   color: transparent;
 }
@@ -26,7 +27,15 @@
   height: 2px;
   margin: 0.75rem auto 0;
   border-radius: 2px;
-  background: var(--gradient-frame);
+  background: var(--gradient-text);
+}
+
+/* Gradient text is clipped away when the system overrides colors. */
+@media (forced-colors: active) {
+  .title {
+    background: none;
+    color: CanvasText;
+  }
 }
 
 @media (width <= 600px) {

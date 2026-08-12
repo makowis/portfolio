@@ -11,6 +11,11 @@ exports[`Footer renders correctly 1`] = `
       target="_blank"
     >
       Powered by mako_wis
+      <span
+        class="visuallyHidden"
+      >
+        （新しいタブで開きます）
+      </span>
     </a>
   </footer>
 </div>

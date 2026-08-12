@@ -3,6 +3,7 @@
 import type { FC } from 'react';
 import dynamic from 'next/dynamic';
 import Section from '../atoms/section';
+import VisuallyHidden from '../atoms/visually-hidden';
 import styles from '../../../styles/contributions.module.css';
 
 const GitHubCalendar = dynamic(
@@ -33,6 +34,7 @@ const Contributions: FC = () => (
         rel="noopener noreferrer"
       >
         @makowis on GitHub
+        <VisuallyHidden>（新しいタブで開きます）</VisuallyHidden>
       </a>
     </div>
   </Section>

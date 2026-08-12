@@ -18,8 +18,8 @@
 
     &:hover,
     &:focus-visible {
-      color: var(--color-neon-green);
-      text-shadow: 0 0 16px rgb(74 222 128 / 50%);
+      color: var(--color-accent-green);
+      text-shadow: 0 0 16px rgb(134 239 172 / 50%);
     }
   }
 }

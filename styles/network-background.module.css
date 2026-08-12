@@ -50,8 +50,19 @@
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .node {
-    animation: none;
+/* Keep the mesh from competing with text when high contrast is requested. */
+@media (prefers-contrast: more) {
+  .network {
+    opacity: 0.15;
+  }
+
+  .glow {
+    opacity: 0.4;
+  }
+}
+
+@media (forced-colors: active) {
+  .container {
+    display: none;
   }
 }

@@ -12,15 +12,16 @@
   margin-top: 0.5rem;
 
   a {
-    color: var(--color-neon-cyan);
+    color: var(--color-accent-cyan);
     font-weight: 500;
     letter-spacing: 0.04em;
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.25em;
 
-    &:hover,
-    &:focus-visible {
-      text-decoration: underline;
-      text-shadow: 0 0 16px rgb(34 211 238 / 55%);
+    &:hover {
+      text-decoration-thickness: 2px;
+      text-shadow: 0 0 16px rgb(103 232 249 / 55%);
     }
   }
 }

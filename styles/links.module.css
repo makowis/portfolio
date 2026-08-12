@@ -27,20 +27,9 @@
     &:hover,
     &:focus-visible {
       background: var(--color-surface-hover);
-      border-color: rgb(34 211 238 / 55%);
-      box-shadow: 0 0 20px rgb(34 211 238 / 25%);
+      border-color: var(--color-accent-cyan);
+      box-shadow: 0 0 20px rgb(103 232 249 / 25%);
       transform: translateY(-2px);
-    }
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .links a {
-    transition: none;
-
-    &:hover,
-    &:focus-visible {
-      transform: none;
     }
   }
 }
