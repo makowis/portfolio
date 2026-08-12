@@ -1,0 +1,57 @@
+.container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.glow {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      60% 45% at 18% 12%,
+      rgb(139 92 246 / 28%) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      55% 40% at 88% 30%,
+      rgb(34 211 238 / 22%) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      70% 50% at 50% 108%,
+      rgb(74 222 128 / 22%) 0%,
+      transparent 70%
+    );
+}
+
+.network {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.35;
+}
+
+.node {
+  animation: twinkle 6s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .node {
+    animation: none;
+  }
+}

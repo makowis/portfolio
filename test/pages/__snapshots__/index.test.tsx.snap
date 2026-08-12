@@ -5,6 +5,21 @@ exports[`renders correctly 1`] = `
   <div
     class="container"
   >
+    <h1
+      class="title"
+    >
+      makowis.dev
+    </h1>
+    <p
+      class="name"
+    >
+      Henmi Makoto
+    </p>
+    <p
+      class="description"
+    >
+      ポートフォリオサイトという名のリンク集
+    </p>
     <div
       class="iconWrapper"
     >
@@ -19,16 +34,6 @@ exports[`renders correctly 1`] = `
         width="120"
       />
     </div>
-    <h1
-      class="title"
-    >
-      Henmi Makoto
-    </h1>
-    <p
-      class="description"
-    >
-      ポートフォリオサイトという名のリンク集
-    </p>
   </div>
   <section
     class="container"

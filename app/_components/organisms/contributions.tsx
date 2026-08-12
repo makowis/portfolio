@@ -10,6 +10,10 @@ const GitHubCalendar = dynamic(
   { ssr: false },
 );
 
+const calendarTheme = {
+  dark: ['#111b2e', '#1e3a5f', '#0e7490', '#22d3ee', '#5eead4'],
+};
+
 const Contributions: FC = () => (
   <Section title="Contributions">
     <div className={styles.container}>
@@ -18,7 +22,8 @@ const Contributions: FC = () => (
         blockSize={12}
         blockMargin={4}
         fontSize={14}
-        colorScheme="light"
+        colorScheme="dark"
+        theme={calendarTheme}
       />
     </div>
     <div className={styles.link}>

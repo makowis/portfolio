@@ -1,6 +1,7 @@
 import type { FC, ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { Inter, Noto_Sans_JP } from 'next/font/google';
+import NetworkBackground from './_components/atoms/network-background';
 import Footer from './_components/organisms/footer';
 import styles from '../styles/layout.module.css';
 import '../styles/globals.css';
@@ -48,8 +49,11 @@ const Layout: FC<Props> = ({ children }) => (
   <html lang="ja" className={`${inter.variable} ${notoSansJP.variable}`}>
     <body>
       <div className={styles.container}>
-        <main className={styles.main}>{children}</main>
-        <Footer />
+        <NetworkBackground />
+        <div className={styles.content}>
+          <main className={styles.main}>{children}</main>
+          <Footer />
+        </div>
       </div>
     </body>
   </html>

@@ -1,3 +1,30 @@
+:root {
+  --color-bg: #060b16;
+  --color-bg-elevated: #0b1424;
+  --color-surface: rgb(255 255 255 / 4%);
+  --color-surface-hover: rgb(255 255 255 / 9%);
+  --color-border: rgb(255 255 255 / 10%);
+  --color-text: #f2f6ff;
+  --color-text-muted: #93a7c8;
+
+  --color-neon-violet: #8b5cf6;
+  --color-neon-cyan: #22d3ee;
+  --color-neon-green: #4ade80;
+
+  --gradient-frame: linear-gradient(
+    120deg,
+    var(--color-neon-violet) 0%,
+    #6366f1 25%,
+    var(--color-neon-cyan) 60%,
+    var(--color-neon-green) 100%
+  );
+
+  --frame-width: 12px;
+  --frame-radius: 20px;
+
+  color-scheme: dark;
+}
+
 html,
 body {
   padding: 0;
@@ -18,10 +45,32 @@ body {
     sans-serif;
 }
 
+html {
+  background: var(--gradient-frame) fixed;
+}
+
+body {
+  padding: var(--frame-width);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+}
+
 a {
   color: inherit;
 }
 
 * {
   box-sizing: border-box;
+}
+
+::selection {
+  color: var(--color-bg);
+  background: var(--color-neon-cyan);
+}
+
+@media (width <= 600px) {
+  :root {
+    --frame-width: 8px;
+    --frame-radius: 14px;
+  }
 }
