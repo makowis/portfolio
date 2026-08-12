@@ -5,6 +5,21 @@ exports[`renders correctly 1`] = `
   <div
     class="container"
   >
+    <h1
+      class="title"
+    >
+      makowis.dev
+    </h1>
+    <p
+      class="name"
+    >
+      Henmi Makoto
+    </p>
+    <p
+      class="description"
+    >
+      ポートフォリオサイトという名のリンク集
+    </p>
     <div
       class="iconWrapper"
     >
@@ -19,16 +34,6 @@ exports[`renders correctly 1`] = `
         width="120"
       />
     </div>
-    <h1
-      class="title"
-    >
-      Henmi Makoto
-    </h1>
-    <p
-      class="description"
-    >
-      ポートフォリオサイトという名のリンク集
-    </p>
   </div>
   <section
     class="container"
@@ -48,6 +53,11 @@ exports[`renders correctly 1`] = `
           target="_blank"
         >
           Twitter
+          <span
+            class="visuallyHidden"
+          >
+            （新しいタブで開きます）
+          </span>
         </a>
       </li>
       <li>
@@ -57,6 +67,11 @@ exports[`renders correctly 1`] = `
           target="_blank"
         >
           Facebook
+          <span
+            class="visuallyHidden"
+          >
+            （新しいタブで開きます）
+          </span>
         </a>
       </li>
       <li>
@@ -66,6 +81,11 @@ exports[`renders correctly 1`] = `
           target="_blank"
         >
           Instagram
+          <span
+            class="visuallyHidden"
+          >
+            （新しいタブで開きます）
+          </span>
         </a>
       </li>
       <li>
@@ -75,6 +95,11 @@ exports[`renders correctly 1`] = `
           target="_blank"
         >
           GitHub
+          <span
+            class="visuallyHidden"
+          >
+            （新しいタブで開きます）
+          </span>
         </a>
       </li>
       <li>
@@ -84,6 +109,11 @@ exports[`renders correctly 1`] = `
           target="_blank"
         >
           Speaker Deck
+          <span
+            class="visuallyHidden"
+          >
+            （新しいタブで開きます）
+          </span>
         </a>
       </li>
       <li>
@@ -93,6 +123,11 @@ exports[`renders correctly 1`] = `
           target="_blank"
         >
           Blog
+          <span
+            class="visuallyHidden"
+          >
+            （新しいタブで開きます）
+          </span>
         </a>
       </li>
     </ul>
@@ -230,6 +265,11 @@ exports[`renders correctly 1`] = `
         target="_blank"
       >
         @makowis on GitHub
+        <span
+          class="visuallyHidden"
+        >
+          （新しいタブで開きます）
+        </span>
       </a>
     </div>
   </section>

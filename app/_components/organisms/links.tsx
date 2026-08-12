@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import Section from '../atoms/section';
+import VisuallyHidden from '../atoms/visually-hidden';
 import styles from '../../../styles/links.module.css';
 
 type LinkItem = {
@@ -23,6 +24,7 @@ const Links: FC = () => (
         <li key={item.name}>
           <a href={item.url} target="_blank" rel="noopener noreferrer">
             {item.name}
+            <VisuallyHidden>（新しいタブで開きます）</VisuallyHidden>
           </a>
         </li>
       ))}

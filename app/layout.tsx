@@ -1,6 +1,7 @@
 import type { FC, ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { Inter, Noto_Sans_JP } from 'next/font/google';
+import CodeBackground from './_components/atoms/code-background';
 import Footer from './_components/organisms/footer';
 import styles from '../styles/layout.module.css';
 import '../styles/globals.css';
@@ -47,9 +48,17 @@ export const metadata: Metadata = {
 const Layout: FC<Props> = ({ children }) => (
   <html lang="ja" className={`${inter.variable} ${notoSansJP.variable}`}>
     <body>
+      <a href="#main-content" className={styles.skipLink}>
+        メインコンテンツへスキップ
+      </a>
       <div className={styles.container}>
-        <main className={styles.main}>{children}</main>
-        <Footer />
+        <CodeBackground />
+        <div className={styles.content}>
+          <main id="main-content" className={styles.main}>
+            {children}
+          </main>
+          <Footer />
+        </div>
       </div>
     </body>
   </html>

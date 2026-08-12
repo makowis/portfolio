@@ -1,0 +1,116 @@
+.container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  border-radius: inherit;
+}
+
+.glow {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      60% 45% at 18% 12%,
+      rgb(139 92 246 / 28%) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      55% 40% at 88% 30%,
+      rgb(34 211 238 / 22%) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      70% 50% at 50% 108%,
+      rgb(74 222 128 / 22%) 0%,
+      transparent 70%
+    );
+}
+
+.snippets {
+  position: absolute;
+  inset: 0;
+  display: grid;
+
+  /* Content-sized columns pushed outward: the middle is dimmed by the
+     vignette, so a snippet placed there would be invisible. */
+  grid-template-columns: repeat(2, max-content);
+  justify-content: space-between;
+  align-content: space-evenly;
+  gap: clamp(2rem, 8vh, 7rem) 2rem;
+  padding: 3rem 1.5rem;
+}
+
+.snippet {
+  margin: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.85rem;
+  line-height: 1.8;
+  white-space: pre;
+  opacity: 0.32;
+  filter: blur(0.35px);
+  justify-self: start;
+
+  /* Only vertical offsets: a horizontal one reads as a code indent. */
+  &:nth-child(3n + 2) {
+    margin-block-start: 2.5rem;
+  }
+
+  &:nth-child(4n + 3) {
+    margin-block-start: -2rem;
+  }
+
+  &:nth-child(3n + 1) {
+    color: var(--color-accent-cyan);
+  }
+
+  &:nth-child(3n + 2) {
+    color: var(--color-accent-violet);
+  }
+
+  &:nth-child(3n) {
+    color: var(--color-accent-green);
+  }
+}
+
+/* Dims the middle column so the snippets never fight with the content. */
+.vignette {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgb(6 11 22 / 80%) 24%,
+    rgb(6 11 22 / 80%) 76%,
+    transparent 100%
+  );
+}
+
+@media (width <= 900px) {
+  .snippets {
+    grid-template-columns: max-content;
+    justify-content: start;
+    padding: 2rem 0.5rem;
+  }
+
+  .snippet {
+    font-size: 0.7rem;
+  }
+}
+
+@media (prefers-contrast: more) {
+  .snippet {
+    opacity: 0.12;
+  }
+
+  .glow {
+    opacity: 0.4;
+  }
+}
+
+@media (forced-colors: active) {
+  .container {
+    display: none;
+  }
+}

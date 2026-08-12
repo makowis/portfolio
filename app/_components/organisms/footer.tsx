@@ -1,4 +1,5 @@
 import type { FC } from 'react';
+import VisuallyHidden from '../atoms/visually-hidden';
 import styles from '../../../styles/footer.module.css';
 
 const Footer: FC = () => (
@@ -9,6 +10,7 @@ const Footer: FC = () => (
       rel="noopener noreferrer"
     >
       Powered by mako_wis
+      <VisuallyHidden>（新しいタブで開きます）</VisuallyHidden>
     </a>
   </footer>
 );
