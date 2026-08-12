@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import styles from '../../../styles/section.module.scss';
+import styles from '../../../styles/section.module.css';
 
 type Props = {
   title: string;

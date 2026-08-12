@@ -14,7 +14,7 @@ Next.js (App Router) を使用した静的サイトで、GitHub Pagesにデプ�
 | フレームワーク         | Next.js 16 (App Router)         |
 | 言語                   | TypeScript 5.9                  |
 | UI                     | React 19                        |
-| スタイリング           | SCSS Modules + CSS              |
+| スタイリング           | CSS Modules                     |
 | テスト                 | Jest 30 + React Testing Library |
 | リンター               | ESLint 9 + Prettier             |
 | パッケージマネージャー | Yarn 4 (Berry)                  |
@@ -31,7 +31,7 @@ portfolio/
 │       └── footer.tsx      # フッター
 ├── styles/                 # スタイルファイル
 │   ├── globals.css         # グローバルスタイル
-│   ├── *.module.scss       # SCSSモジュール
+│   ├── *.module.css        # CSSモジュール
 ├── test/                   # テストファイル
 │   └── pages/              # ページテスト
 ├── public/                 # 静的ファイル
@@ -68,10 +68,11 @@ portfolio/
 
 ### スタイリング
 
-- **CSS Modules (SCSS)** を使用
-- ファイル名: `*.module.scss`
+- **CSS Modules** を使用
+- ファイル名: `*.module.css`
 - クラス名: camelCase (`styles.className`)
 - グローバルスタイルは `styles/globals.css` に記述
+- ネストは CSS Nesting (`&:hover` など) をそのまま使用できる
 
 ### テスト
 
@@ -134,7 +135,7 @@ it('renders correctly', () => {
 
 ```tsx
 import React, { FC } from 'react';
-import styles from '../styles/PageName.module.scss';
+import styles from '../styles/PageName.module.css';
 
 const PageName: FC = () => (
   <>
@@ -149,7 +150,7 @@ export default PageName;
 
 ```tsx
 import React, { FC } from 'react';
-import styles from '../../styles/componentName.module.scss';
+import styles from '../../styles/componentName.module.css';
 
 const ComponentName: FC = () => (
   <div className={styles.container}>{/* コンテンツ */}</div>

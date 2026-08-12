@@ -3,7 +3,7 @@
 import React, { FC } from 'react';
 import dynamic from 'next/dynamic';
 import Section from '../atoms/section';
-import styles from '../../../styles/contributions.module.scss';
+import styles from '../../../styles/contributions.module.css';
 
 const GitHubCalendar = dynamic(
   () => import('react-github-calendar').then((mod) => mod.GitHubCalendar),
