@@ -22,6 +22,7 @@ type Props = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://makowis.dev'),
   title: {
     default: 'mako_wis.dev',
     template: '%s | mako_wis.dev',

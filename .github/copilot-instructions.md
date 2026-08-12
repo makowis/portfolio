@@ -30,6 +30,7 @@ portfolio/
 │   ├── robots.ts               # robots.txt を生成
 │   ├── sitemap.ts              # sitemap.xml を生成
 │   ├── icon.svg                # ファビコン（favicon.ico / apple-icon.png も同階層）
+│   ├── opengraph-image.png     # OGP画像（alt は opengraph-image.alt.txt）
 │   └── _components/            # UIコンポーネント（ルーティング対象外）
 │       ├── atoms/              # 最小単位のコンポーネント
 │       │   └── section.tsx
@@ -144,6 +145,10 @@ it('renders correctly', () => {
 4. **メタデータ**: `layout.tsx` で `Metadata` 型を使用してSEO設定
 
 5. **robots.txt / sitemap.xml**: `app/robots.ts` と `app/sitemap.ts` で生成する。静的エクスポートのため `export const dynamic = 'force-static'` が必須
+
+6. **OGP画像**: `app/opengraph-image.png` を静的ファイルとして置く。`opengraph-image.tsx`（`ImageResponse` による動的生成）は拡張子なしの `/opengraph-image` として出力され、GitHub Pages で MIME タイプが正しく付与されないため使用しない
+
+7. **metadataBase**: OGP画像の絶対 URL 解決に必要なため `layout.tsx` で設定する
 
 ## 新規ファイル作成時のテンプレート
 
