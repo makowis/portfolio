@@ -1,6 +1,3 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-
 // Layout contains <html> and <body> tags which can't be rendered in jsdom directly.
 // We test the internal structure by mocking the component structure.
 describe('Layout', () => {

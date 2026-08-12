@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import type { FC, ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { Inter, Noto_Sans_JP } from 'next/font/google';
 import Footer from './_components/organisms/footer';
@@ -18,7 +18,7 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 type Props = {
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 export const metadata: Metadata = {

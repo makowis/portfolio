@@ -57,16 +57,20 @@ portfolio/
 - **関数コンポーネント**: `FC` 型を使用する
 
   ```tsx
-  import React, { FC } from 'react';
+  import type { FC } from 'react';
   const Component: FC = () => <div>...</div>;
   export default Component;
   ```
 
+  `jsx: "react-jsx"` により JSX の変換に `React` の値インポートは不要。React の型は `import type` で個別に取り込む
+
 - **Props型定義**: コンポーネントファイル内で `type Props` として定義
 
   ```tsx
+  import type { FC, ReactNode } from 'react';
+
   type Props = {
-    children: React.ReactNode;
+    children: ReactNode;
   };
   ```
 
@@ -147,7 +151,7 @@ it('renders correctly', () => {
 ### ページコンポーネント
 
 ```tsx
-import React, { FC } from 'react';
+import type { FC } from 'react';
 import styles from '../styles/PageName.module.css';
 
 const PageName: FC = () => (
@@ -162,7 +166,7 @@ export default PageName;
 ### レイアウトコンポーネント
 
 ```tsx
-import React, { FC } from 'react';
+import type { FC } from 'react';
 import styles from '../../styles/componentName.module.css';
 
 const ComponentName: FC = () => (
