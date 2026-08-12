@@ -46,14 +46,7 @@
   white-space: pre;
   opacity: 0.32;
   filter: blur(0.35px);
-
-  &:nth-child(odd) {
-    justify-self: start;
-  }
-
-  &:nth-child(even) {
-    justify-self: end;
-  }
+  justify-self: start;
 
   /* Only vertical offsets: a horizontal one reads as a code indent. */
   &:nth-child(3n + 2) {
@@ -98,11 +91,6 @@
 
   .snippet {
     font-size: 0.7rem;
-
-    /* Right aligning a wide block would push its start off screen. */
-    &:nth-child(even) {
-      justify-self: start;
-    }
   }
 }
 
