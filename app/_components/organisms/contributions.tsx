@@ -12,7 +12,7 @@ const GitHubCalendar = dynamic(
 );
 
 const calendarTheme = {
-  dark: ['#1c2740', '#1e3a5f', '#0e7490', '#22d3ee', '#5eead4'],
+  dark: ['#111b2e', '#1e3a5f', '#0e7490', '#22d3ee', '#5eead4'],
 };
 
 const Contributions: FC = () => (
