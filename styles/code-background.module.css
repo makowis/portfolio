@@ -32,7 +32,11 @@
   position: absolute;
   inset: 0;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  /* Content-sized columns pushed outward: the middle is dimmed by the
+     vignette, so a snippet placed there would be invisible. */
+  grid-template-columns: repeat(2, max-content);
+  justify-content: space-between;
   align-content: space-evenly;
   gap: clamp(2rem, 8vh, 7rem) 2rem;
   padding: 3rem 1.5rem;
@@ -85,7 +89,8 @@
 
 @media (width <= 900px) {
   .snippets {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: max-content;
+    justify-content: start;
     padding: 2rem 0.5rem;
   }
 
