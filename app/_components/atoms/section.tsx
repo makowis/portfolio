@@ -1,9 +1,9 @@
-import React, { FC } from 'react';
+import type { FC, ReactNode } from 'react';
 import styles from '../../../styles/section.module.css';
 
 type Props = {
   title: string;
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 const Section: FC<Props> = ({ title, children }) => (

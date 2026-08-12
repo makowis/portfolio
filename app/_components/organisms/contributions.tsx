@@ -1,6 +1,6 @@
 'use client';
 
-import React, { FC } from 'react';
+import type { FC } from 'react';
 import dynamic from 'next/dynamic';
 import Section from '../atoms/section';
 import styles from '../../../styles/contributions.module.css';
