@@ -5,6 +5,8 @@ on:
     branches: [main]
     types:
       - completed
+permissions:
+  contents: write
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -12,13 +14,19 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - name: Setup Node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: '24'
       - name: yarn enable
         run: corepack enable
+      # Corepack で Yarn 4 を有効化した後でないと Yarn 1 のキャッシュ位置が使われる
+      - name: Configure Yarn cache
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: 'yarn'
       - name: Install dependencies
-        run: yarn --frozen-lockfile
+        run: yarn install --immutable
       - name: Page Generate
         run: yarn build
       - name: Deploy
