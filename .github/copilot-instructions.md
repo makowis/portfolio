@@ -112,7 +112,6 @@ it('renders correctly', () => {
 | ----------------- | ------------------------------ |
 | `yarn dev`        | 開発サーバー起動               |
 | `yarn build`      | 本番ビルド（静的エクスポート） |
-| `yarn start`      | 本番サーバー起動               |
 | `yarn lint`       | ESLint + Prettier チェック     |
 | `yarn lint:fix`   | リント自動修正                 |
 | `yarn test`       | テスト実行                     |
