@@ -33,3 +33,5 @@ yarn-error.log*
 .yarn
 # Next.js auto-generated type file
 next-env.d.ts
+# tsc incremental cache
+*.tsbuildinfo

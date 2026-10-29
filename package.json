@@ -8,6 +8,7 @@
     "lint:js": "eslint .",
     "lint:fix": "yarn lint:js --fix && prettier --write .",
     "lint": "yarn lint:js && prettier --check .",
+    "typecheck": "tsc --noEmit",
     "test": "jest",
     "test:watch": "jest --watch"
   },
@@ -24,12 +25,13 @@
     "@types/jest": "^30.0.0",
     "@types/node": "^26.2.0",
     "@types/react": "^19.2.18",
+    "@typescript/native": "npm:typescript@^7.0.2",
     "eslint": "^9.39.5",
     "eslint-config-next": "^16.4.3",
     "jest": "^30.4.2",
     "jest-environment-jsdom": "^30.5.0",
     "prettier": "^3.9.6",
-    "typescript": "^5.9.3"
+    "typescript": "npm:@typescript/typescript6@^6.0.2"
   },
   "packageManager": "yarn@4.18.0"
 }

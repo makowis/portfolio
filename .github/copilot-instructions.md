@@ -12,7 +12,7 @@ Next.js (App Router) を使用した静的サイトで、GitHub Pagesにデプ�
 | カテゴリ               | 技術                            |
 | ---------------------- | ------------------------------- |
 | フレームワーク         | Next.js 16 (App Router)         |
-| 言語                   | TypeScript 5.9                  |
+| 言語                   | TypeScript 7 (tsc) + 6.0 (API)  |
 | UI                     | React 19                        |
 | スタイリング           | CSS Modules                     |
 | テスト                 | Jest 30 + React Testing Library |

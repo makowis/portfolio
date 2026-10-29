@@ -34,3 +34,5 @@ jobs:
           eslint_flags: '.'
       - name: eslint
         run: yarn lint
+      - name: typecheck
+        run: yarn typecheck
