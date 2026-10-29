@@ -14,14 +14,14 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v7
         with:
-          node-version: '24'
+          node-version: '26'
       - name: yarn enable
-        run: corepack enable
+        run: npm install -g corepack && corepack enable
       # Corepack で Yarn 4 を有効化した後でないと Yarn 1 のキャッシュ位置が使われる
       - name: Configure Yarn cache
         uses: actions/setup-node@v7
         with:
-          node-version: '24'
+          node-version: '26'
           cache: 'yarn'
       - name: yarn install
         run: yarn install --immutable
@@ -30,6 +30,7 @@ jobs:
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-review
-          eslint_flags: './**/*.{ts,tsx,js}'
+          # グロブを渡すとアクション内の bash が展開し、ignores 対象の node_modules/decimal.js まで明示指定されて ESLint がエラーになるため、対象は eslint.config.mjs に任せる
+          eslint_flags: '.'
       - name: eslint
         run: yarn lint
