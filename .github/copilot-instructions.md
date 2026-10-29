@@ -16,7 +16,7 @@ Next.js (App Router) を使用した静的サイトで、GitHub Pagesにデプ�
 | UI                     | React 19                        |
 | スタイリング           | CSS Modules                     |
 | テスト                 | Jest 30 + React Testing Library |
-| リンター               | ESLint 9 + Prettier             |
+| リンター               | ESLint 10 + Prettier            |
 | パッケージマネージャー | Yarn 4 (Berry)                  |
 | デプロイ               | GitHub Pages (GitHub Actions)   |
 
