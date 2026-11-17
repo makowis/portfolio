@@ -6323,7 +6323,7 @@ __metadata:
     prettier: "npm:^3.9.6"
     react: "npm:^19.3.1"
     react-dom: "npm:^19.3.1"
-    react-github-calendar: "npm:^5.0.8"
+    react-github-calendar: "npm:^5.0.9"
     typescript: "npm:@typescript/typescript6@^6.0.2"
   languageName: unknown
   linkType: soft
@@ -6468,14 +6468,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-github-calendar@npm:^5.0.8":
-  version: 5.0.8
-  resolution: "react-github-calendar@npm:5.0.8"
+"react-github-calendar@npm:^5.0.9":
+  version: 5.0.9
+  resolution: "react-github-calendar@npm:5.0.9"
   dependencies:
     react-activity-calendar: "npm:^3.1.2"
   peerDependencies:
     react: ^18.0.0 || ^19.0.0
-  checksum: 10c0/649538cee6d46391239181b9daa6287b25c94e99492bede302e71d73c757ef7191e528a64c6193b3820eb843703768d0a4a4e9153e776c19563df961fcbee00d
+  checksum: 10c0/2beada76838363a7cd22ae6e24e523de56a160f10760427357ebbf18b4bb9fbc7e0623c7f80f5e09dc17d9bc79e6aeb197e196d2c76a03c82e8e1cb12a7941ae
   languageName: node
   linkType: hard
 
